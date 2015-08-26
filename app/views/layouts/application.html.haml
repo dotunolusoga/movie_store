@@ -4,16 +4,15 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %title= content_for?(:title) ? yield(:title) : "foundation-rails"
-    = stylesheet_link_tag    "application"
+    = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-  = render "layouts/header"
-  = render "layouts/alerts"
-  #main-content.row.full-min-height
-  = yield
-  %footer.row
-  .large-12.columns
-    %hr/
-    %p © MovieStore 2014
+    = render "layouts/header"
+    = render "layouts/alerts"
+    #main-content.row.full-min-height
+      = yield
+    %footer.row
+      %hr/
+      %p © MovieStore 2014
