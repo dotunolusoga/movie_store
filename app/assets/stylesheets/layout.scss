@@ -41,3 +41,13 @@ body {
     .movie-info { .title { height: 4em; } }
   }
 }
+
+.right {
+  li {
+    display: inline-block;
+    margin: 7px;
+    .new_color {
+      color: #B18806;
+    }
+  }
+}

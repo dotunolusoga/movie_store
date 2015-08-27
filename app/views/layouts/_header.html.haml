@@ -10,6 +10,10 @@
         %a{:href => "#"}
           %span Menu
     %section.top-bar-section
-      %ul.right
-        %li= link_to "Register", "#"
-        %li= link_to "Login", "#"
+    %ul.right
+      - if signed_in?
+        %li= link_to current_user.email, edit_user_registration_path, class: "new_color"
+        %li= link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        %li= link_to "Register", new_user_registration_path
+        %li= link_to "Login", new_user_session_path
