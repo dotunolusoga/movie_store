@@ -88,6 +88,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hiredis (0.4.5)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -145,6 +146,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redis (3.0.7)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rspec-core (3.2.3)
@@ -218,11 +220,13 @@ DEPENDENCIES
   faker
   foundation-rails
   haml-rails
+  hiredis (~> 0.4.5)
   jbuilder (~> 2.0)
   jquery-rails
   launchy
   pg
   rails (= 4.2.1)
+  redis (~> 3.0.1)
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
