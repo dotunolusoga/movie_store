@@ -12,8 +12,16 @@
     %section.top-bar-section
     %ul.right
       - if signed_in?
+        %li
+          = link_to cart_path do
+            %i.fi-shopping-cart
+            My Cart
+            (
+            %span.cart-count>= current_user.cart_count
+            )
         %li= link_to current_user.email, edit_user_registration_path, class: "new_color"
         %li= link_to "Logout", destroy_user_session_path, method: :delete
+
       - else
         %li= link_to "Register", new_user_registration_path
         %li= link_to "Login", new_user_session_path
